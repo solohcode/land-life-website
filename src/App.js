@@ -1,4 +1,4 @@
-import Footer from './Footer'
+// import Footer from './Footer'
 import Header from './Header'
 import banner from './assets/banner.png'
 import { Form, Input, Button } from 'antd'
@@ -32,7 +32,7 @@ function App() {
       img: feature3,
       title: "Healthcare Technology",
       description: "Zygomed e-pharmacy and market place let you buy medicine online and also access related information regarding your prescription drugs. You can know about dosage, side effects, and other details about your medicines through the app. We offer",
-      list: ["Online delivery service dedicated to prescription drugs, supplements and vitamins.", "Intravenous therapy vials", "Direct seller and a third-party registered pharmacies marketplace.", "Installation & Training"],
+      list: ["Digital consumer application", "E -commerce. Zygomed Pharma-online shopping - Discover our wide range of health and beauty products, supplements, and much more, all available at the click of a button", "Consume Health platform", "Private label apothecary", "Med-tech device innovation", "Retail", "Wholesale", "Loyalty program"],
     },
   ]
 
@@ -65,6 +65,25 @@ function App() {
       value: "+00000000000",
       url: "tel:+00000000000",
     },
+  ]
+
+  const pharma = [
+    {
+      title: "E commerce market place",
+      description: "Online shopping - Discover our wide range of health and beauty products, supplements, and much more, all available at the click of a button.",
+    },
+    {
+      title: "Retail",
+      description: "Health, beauty and pharmacy chain.",
+    },
+    {
+      title: "Loyalty Program",
+      description: "Zygomed Elite club Card, rewards customers with ZM Points that can be used towards purchases made at on sale points. Not only do rewards customers with points to spend on treats, but also entitles them to a free Health & Beauty blog, multimedia content ,and a lot more personalized information offers",
+    },
+    {
+      title: "Wholesale",
+      description: "Zygomed extends its wholesale business into the distribution business whereby it would service both the wholesalers and retailers. We embraced pharmacist and offer supply of services to a wide number of sectors, including hospitals, doctors, the FMCG market, emergency medical services, specialised medical and veterinary services and clinics.",
+    }
   ]
 
   window.addEventListener("scroll", () => {
@@ -100,7 +119,7 @@ function App() {
       <div className='w-full bg-[#173759] text-white pt-10 text-center space-y-5'>
         <p className='text-base font-semibold px-5'>About us</p>
         <p className='text-4xl font-semibold px-5'>Increasing focus on health and wellbeing</p>
-        <p className='text-xl font-normal md:px-60 px-5'>The prevailing notion is that you can never be too healthy over the coming years, an increasing amount of personal and public resources will be spent on health and longevity: including regulation and awareness campaigns that will focus on preventive measure.</p>
+        <p className='text-xl font-normal md:px-60 lg:px-80 px-5'>The prevailing notion is that you can never be too healthy over the coming years, an increasing amount of personal and public resources will be spent on health and longevity: including regulation and awareness campaigns that will focus on preventive measure.</p>
         <img alt='about banner' src={aboutBanner} className='mx-auto' />
       </div>
 
@@ -132,13 +151,22 @@ function App() {
         ))}
       </div>
 
-      <div className='md:p-5 sm:p-10'>
-        <div className='w-full home_app_bg p-5 md:p-10 rounded-xl text-white bg-[#173759] !relative space-y-5'>
-          <p className='w-full md:w-[50%] leading-[65px] text-[55px] font-black'>Closer look at the healthcare system in Nigeria</p>
-          <p className='w-full md:w-[50%] text-xl font-normal'>Download our brochure and read our latest research on the Nigerian healthcare system</p>
-          <button className='py-2 px-5 rounded-lg text-[#173759] bg-[#FDE05B] hover:bg-[#a4d1ec]'>Download our Brochure</button>
-          <img alt='app banner' src={appBanner} className='w-auto md:!w-[650px] md:absolute -top-5 right-0' />
+      <div className='w-full home_app_bg p-5 md:p-10 lg:p-20 text-[#F5F5F5] bg-[#173759] !relative space-y-5'>
+        <p className='w-full md:w-[50%] leading-[65px] text-[55px] font-black text-white'>Zygomed Pharma+</p>
+        <p className='w-full md:w-[50%] text-xl font-normal'>
+          Beyond being just a pharmacy and retail store; we deliver healthcare in various ways, extending our services, products, and initiatives to encompass community clinics, feeding programs, the Zygomed Foundation, and health insurance products. With the momentum of initiatives like these driving Zygomed forward, we hope to lead a movement in Africa , becoming the champions of better health for all.
+          This shift in perspective allows us to see the bigger picture and take a more holistic view of health and wellness in today's world. It aligns with the growth of our offerings, which we have developed and implemented over the years.
+        </p>
+        <div className='w-full md:w-[50%] p-5 border-l-4 border-white grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10'>
+          {pharma?.map(({title, description}) => (
+            <div className='space-y-5' key={title}>
+              <p className='text-xl font-medium text-[#F5C143]'>{title}</p>
+              <p className='text-base font-normal'>{description}</p>
+            </div>
+          ))}
         </div>
+        {/* <button className='py-2 px-5 rounded-lg text-[#173759] bg-[#FDE05B] hover:bg-[#a4d1ec]'>Download our Brochure</button> */}
+        <img alt='app banner' src={appBanner} className='w-auto md:!w-[650px] md:absolute -top-5 right-0' />
       </div>
 
       <div className='w-full text-[#173759]  p-5 sm:p-10 md:px-20 lg:px-32 space-y-5'>
@@ -179,7 +207,7 @@ function App() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
