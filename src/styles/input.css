@@ -14,5 +14,6 @@
   height: 100%;
   background-image: url(../assets/app-bg.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position-x: 100px;
+  background-position-y: 370px;
 }

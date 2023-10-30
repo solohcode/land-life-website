@@ -31,18 +31,18 @@ function Header() {
     },
   ]
 
-  const Logo = () => <img alt="logo" src={logo} />
+  const Logo = () => <a href='#/home'><img alt="logo" src={logo} /></a>
   const Menu = () => (
     <div className="flex flex-col md:flex-row md:items-center gap-7">
       {menu.map(({label, path}) => (
-        <p key={path} className=''>{label}</p>
+        <a href={`#${path}`} key={path} className=''>{label}</a>
       ))}
       {/* <button className='py-2 px-5 rounded-lg bg-[#173759] text-white hover:bg-[#a4d1ec] uppercase'>SHOP NOW</button> */}
     </div>
   )
   return (
     <div className='w-full'>
-      <div id='navbar' className="w-full bg-white z-10 shadow md:flex justify-between items-center py-3 px-5 sm:py-3 sm:px-10 md:px-20">
+      <div id='navbar' className="w-full bg-white z-10 shadow md:flex justify-between items-center py-2 px-5 sm:px-10 md:px-20">
         <div className='w-full flex justify-between items-center md:w-auto'>
           <Logo />
           <Button onClick={onOpen} className='block md:hidden' size='large' icon={<AiOutlineMenu />} />
