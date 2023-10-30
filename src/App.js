@@ -195,7 +195,7 @@ function App() {
         ))}
       </div>
 
-      <div className='w-full p-5 sm:p-10 md:px-20 lg:px-32 bg-[#FDE05B] text-[#101828] flex flex-col md:flex-row justify-between items-center gap-5 md:gap-10'>
+      <div className='w-full p-5 !py-20 sm:p-10 md:px-20 lg:px-32 bg-[#FDE05B] text-[#101828] flex flex-col md:flex-row justify-between items-center gap-5 md:gap-10'>
         <div className='space-y-3'>
           <p className='text-4xl font-semibold'>Sign up for our newsletter</p>
           <p className='text-xl font-normal'>Be the first to know about releases and industry news and insights.</p>
