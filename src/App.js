@@ -186,11 +186,11 @@ function App() {
         {contacts.map(({description, img, title, url, value}) => (
           <div className='space-y-10 border border-[#f8f8f8] shadow rounded-lg p-5' key={title}>
             <img alt={title} src={img} />
-            <div className='pb-5'>
+            <div className='space-y-5'>
               <p className='text-xl font-medium'>{title}</p>
               <p className='text-base font-normal'>{description}</p>
+              <a className='text-base font-medium' href={url}>{value}</a>
             </div>
-            <a className='text-base font-medium' href={url}>{value}</a>
           </div>
         ))}
       </div>
