@@ -5,7 +5,12 @@ function HomePage() {
   return (
     <div className='w-full'>
       <Header />
-      HomePage
+      <div className='w-full'>
+
+        {/* continue work inside here >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+        HomePage
+
+      </div>
     </div>
   )
 }
