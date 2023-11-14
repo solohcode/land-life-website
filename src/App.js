@@ -1,4 +1,6 @@
 import React from "react"
+import HomePage from "./pages/home"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
@@ -12,10 +14,25 @@ function App() {
       menu?.remove("fixed")
     }
   })
+
+  const routes = [
+    {
+      path: "/",
+      component: <HomePage />,
+    }
+  ]
   return (
-    <div className="w-full">
-      hello techend website
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {routes.map(({ path, component }) => (
+          <Route
+            key={path}
+            path={path}
+            element={component}
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
