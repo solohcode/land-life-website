@@ -199,13 +199,15 @@ function HomePage() {
           </div>
           <img src={img10} alt='' className='mx-auto mt-[20px]'></img>
         </div>
-        <div className='mt-[100px]'>
-          <div className='border-2  bg-[#fafafa] p-[50px]'>
+        <div className='mt-10 sm:mt-20 md:mt-32 lg:mt-48'>
+          <div className='border-2 bg-[#fafafa] p-8 md:p-12 lg:p-16'>
             <p className='font-bold text-lg'>Got a project in mind?</p>
             <p>Helping in bringing your Ideas to Reality.</p>
-            <label htmlFor="Email"></label><input type="email" placeholder='enter your email' className='w-[500px] h-[50px] border-2 mt-[50px] placeholder:p-[30px]' /><br />
-            <label htmlFor="text"></label><input type="text" placeholder='enter your message' className='w-[500px] h-[150px] border-2 mt-[10px] placeholder:p-[10px]' /><br />
-            <button className='bg-blue p-[10px] rounded-lg mt-[20px]'>Send to us</button>
+            <label htmlFor="Email"></label>
+            <input type="email" placeholder='Enter your email' className='w-full md:w-96 h-12 border-2 mt-6 md:mt-8 placeholder-p-4' />
+            <label htmlFor="text"></label>
+            <input type="text" placeholder='Enter your message' className='w-full h-32 border-2 mt-4 md:mt-6 placeholder-p-2' />
+            <button className='bg-blue p-4 rounded-lg mt-6'>Send to us</button>
           </div>
         </div>
       </div>
