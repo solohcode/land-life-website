@@ -5,7 +5,7 @@ import Tada from 'react-reveal/Tada'
 import Logo from '../logo';
 
 export function Header() {
-  const [spy, setSpy] = useState(1)
+  const [, setSpy] = useState(1)
   const [isOpen, setIsOpen] = useState(false)
   const onIsOpen = () => setIsOpen(true)
   const onIsClose = () => setIsOpen(false)
@@ -16,24 +16,24 @@ export function Header() {
 
   const items = [
     {
-      key: "#agency",
-      label: "Agency",
-    },
-    {
-      key: "#portfolio",
-      label: "Portfolio",
+      key: "#about",
+      label: "About",
     },
     {
       key: "#services",
       label: "Services",
     },
     {
-      key: "#careers",
-      label: "Careers",
+      key: "#portfolio",
+      label: "Portfolio",
     },
     {
-      key: "#about",
-      label: "About",
+      key: "#team",
+      label: "Team",
+    },
+    {
+      key: "#clients",
+      label: "Clients",
     },
   ];
 
@@ -42,9 +42,9 @@ export function Header() {
       {items.map(({key, label}) => (
         <a href={key} key={key} className='block text-lg font-medium hover:text-blue'>{label}</a>
       ))}
-      <div className='w-full'>
-        <Tada spy={spy}>
-          <Button className='bg-blue hover:!bg-green !rounded-3xl !font-medium' type='primary' size='large'>Hire Us</Button>
+      <div className=''>
+        <Tada>
+          <a href='#message' className='py-2 px-5 text-white bg-blue hover:!bg-green !rounded-3xl !font-medium' type='primary' size='large'>Hire Us</a>
         </Tada>
       </div>
     </div>

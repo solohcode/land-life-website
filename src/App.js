@@ -1,6 +1,7 @@
 import React from "react"
 import HomePage from "./pages/home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PortfolioPage from "./pages/portfolio"
 
 function App() {
 
@@ -19,7 +20,11 @@ function App() {
     {
       path: "/",
       component: <HomePage />,
-    }
+    },
+    {
+      path: "/portfolio",
+      component: <PortfolioPage />,
+    },
   ]
   return (
     <BrowserRouter>
