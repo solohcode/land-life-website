@@ -1,6 +1,6 @@
 {
   "name": "techend-website",
-  "homepage": "https://techend.com.ng/",
+  "homepage": "https://techend.com.ng",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
