@@ -29,7 +29,7 @@ const AboutSection = () => {
               architectures that empower businesses to scale effortlessly.
             </p>
             <div className="flex flex-col gap-6">
-              <p className="md:w-[250px] text-center text-lg font-semibold py-2 bg-green rounded-md text-white">
+              <p className="md:w-[250px] text-center text-lg font-semibold py-2 bg-blue rounded-md text-white">
                 Why choose us?
               </p>
               <div className="w-full flex flex-col gap-4 justify-start items-start">
@@ -68,13 +68,13 @@ const AboutSection = () => {
           </div>
         </Bounce>
       </div>
-      <div className="w-full flex flex-col md:flex-row justify-between items-center p-10 rounded-lg bg-green gap-y-6">
-        <p className="text-xl font-semibold max-w-xl">
+      <div className="w-full flex flex-col md:flex-row justify-between items-center p-10 rounded-lg bg-blue gap-y-6">
+        <p className="text-xl font-semibold max-w-xl text-white">
           Let’s Build the Future of AI-Powered Business!
         </p>
         <Button
           href="#message"
-          className="border-none bg-white w-full md:w-64 !py-3 min-h-[50px] rounded-md text-green font-semibold hover:scale-105 hover:!border-none xl:text-lg transition duration-300"
+          className="border-none bg-white w-full md:w-64 !py-3 min-h-[50px] rounded-md text-blue font-semibold hover:scale-105 hover:!border-none xl:text-lg transition duration-300"
         >
           Contact us
         </Button>

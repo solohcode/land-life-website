@@ -61,7 +61,7 @@ export function Header() {
       id="navbar"
       className="w-full z-10 top-0 backdrop-blur-xl shadow-md p-5 md:px-10 lg:px-20 xl:px-32 md:flex justify-between items-center"
     >
-      <div className="w-full md:w-auto flex justify-between items-center gap-7">
+      <div className="w-full md:w-auto flex justify-between items-center gap-7 md:gap-0">
         <Logo />
         <Button
           size="large"
