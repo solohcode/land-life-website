@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
-import { AiOutlineMenu } from 'react-icons/ai'
-import { Button, Drawer } from 'antd';
-import Tada from 'react-reveal/Tada'
-import Logo from '../logo';
+import React, { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { Button, Drawer } from "antd";
+import Logo from "../logo";
 
 export function Header() {
-  const [, setSpy] = useState(1)
-  const [isOpen, setIsOpen] = useState(false)
-  const onIsOpen = () => setIsOpen(true)
-  const onIsClose = () => setIsOpen(false)
+  const [, setSpy] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+  const onIsOpen = () => setIsOpen(true);
+  const onIsClose = () => setIsOpen(false);
 
   setInterval(() => {
-    setSpy(Math.floor(Math.random() * 100) + 1)
-  }, 5000)
+    setSpy(Math.floor(Math.random() * 100) + 1);
+  }, 5000);
 
   const items = [
     {
@@ -28,40 +27,50 @@ export function Header() {
       label: "Portfolio",
     },
     {
-      key: "#team",
-      label: "Team",
-    },
-    {
-      key: "#clients",
-      label: "Clients",
+      key: "#blog",
+      label: "Blog",
     },
   ];
 
   const MenuContent = () => (
-    <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
-      {items.map(({key, label}) => (
-        <a href={key} key={key} className='block text-lg font-medium hover:text-blue'>{label}</a>
+    <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+      {items.map(({ key, label }) => (
+        <a
+          href={key}
+          key={key}
+          className="block text-lg font-medium hover:text-blue"
+        >
+          {label}
+        </a>
       ))}
-      <div className=''>
-        <Tada>
-          <a href='#message' className='py-2 px-5 text-white bg-blue hover:!bg-green !rounded-3xl !font-medium' type='primary' size='large'>Hire Us</a>
-        </Tada>
+      <div className="">
+        <a
+          href="#message"
+          className="py-3 px-7 text-white bg-blue hover:!bg-green rounded-md !font-medium"
+          type="primary"
+          size="large"
+        >
+          Hire Us
+        </a>
       </div>
     </div>
-  )
+  );
 
   return (
-    <div id='navbar' className='w-full z-10 top-0 backdrop-blur-xl shadow-md p-5 md:px-10 lg:px-20 xl:px-32 md:flex justify-between items-center'>
-      <div className='w-full md:w-auto flex justify-between items-center'>
+    <div
+      id="navbar"
+      className="w-full z-10 top-0 backdrop-blur-xl shadow-md p-5 md:px-10 lg:px-20 xl:px-32 md:flex justify-between items-center"
+    >
+      <div className="w-full md:w-auto flex justify-between items-center gap-7">
         <Logo />
         <Button
-          size='large'
+          size="large"
           onClick={onIsOpen}
-          className='md:hidden'
+          className="md:hidden"
           icon={<AiOutlineMenu />}
         />
       </div>
-      <div className='hidden md:block'>
+      <div className="hidden md:block">
         <MenuContent />
       </div>
 
@@ -76,7 +85,7 @@ export function Header() {
         <MenuContent />
       </Drawer>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
